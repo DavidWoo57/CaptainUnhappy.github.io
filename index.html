@@ -1,8 +1,44 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>kirby</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #FFC0CB;
+}
+-->
+</style></head>
+    <script>
+        var time = new Date();
+
+        var year = time.getFullYear();  //获取年份
+
+        var month = correctDate(time.getMonth() + 1);  //获取月份
+
+        var day = correctDate(time.getDate());   //获取日期
+
+        //var date = "今天是" + year + "年" + month + "月" + day + "日";
+
+
+        function correctDate(date){
+            if(date<10){
+                return '0'+date;
+            }
+        	return date;
+        }
+
+    </script>
 <body>
-<a href="/login.html" > login </a>
+<div align="center"><img src="./kirby/kirby_20220821.png" /></div>
+<form id="form1" name="form1" method="post" action="">
+  <label>
+  
+  <div align="center">
+    <input type="submit" name="button" id="button" value="上一天" />
+  </div>
+  </label>
+</form>
+<p align="center">&nbsp;</p>
 </body>
 </html>
