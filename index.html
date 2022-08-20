@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>kirby</title>
@@ -11,15 +11,9 @@ body {
 </style></head>
     <script>
         var time = new Date();
-
         var year = time.getFullYear();  //获取年份
-
         var month = correctDate(time.getMonth() + 1);  //获取月份
-
         var day = correctDate(time.getDate());   //获取日期
-
-        //var date = "今天是" + year + "年" + month + "月" + day + "日";
-
 
         function correctDate(date){
             if(date<10){
@@ -27,18 +21,16 @@ body {
             }
         	return date;
         }
+		
+		function src_time(){
+            var src=year  + month  + day
+        	return src;
+        }
+
+	document.write('<div align="center"><img src="./kirby/kirby_'+src_time()+'.png"/></div>');
 
     </script>
-<body>
-<div align="center"><img src="./kirby/kirby_"+new Date().getFullYear()+"0821.png" /></div>
-<form id="form1" name="form1" method="post" action="">
-  <label>
-  
-  <div align="center">
-    <input type="submit" name="button" id="button" value="上一天" />
-  </div>
-  </label>
-</form>
-<p align="center">&nbsp;</p>
+<body> 
+
 </body>
 </html>
